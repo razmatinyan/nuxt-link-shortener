@@ -24,7 +24,7 @@
 
     <UNotifications class="sm:w-4/12" />
 
-    <UModal v-model="openModal" prevent-close>
+    <UModal v-model="openModal" prevent-close :ui="{ width: 'sm:max-w-xl' }">
         <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
             <template #header>
                 <div class="flex items-center justify-between">
