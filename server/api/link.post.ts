@@ -1,30 +1,7 @@
 import { defineEventHandler, parseCookies, setCookie, getCookie } from 'h3';
 import { serverSupabaseClient } from '#supabase/server';
 import crypto from 'crypto';
-
-interface Database {
-	public: {
-		Tables: {
-			movies: {
-				Row: {
-					id: number;
-					name: string;
-					data: JSON | null;
-				};
-				Insert: {
-					id?: never;
-					name: string;
-					data?: JSON | null;
-				};
-				Update: {
-					id?: never;
-					name?: string;
-					data?: JSON | null;
-				};
-			};
-		};
-	};
-}
+import { Database } from '@/types/database';
 
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
