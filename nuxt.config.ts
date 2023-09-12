@@ -13,11 +13,7 @@ export default defineNuxtConfig({
 		assets: '/<rootDir>/assets',
 	},
 	supabase: {
-		redirectOptions: {
-			login: '/',
-			callback: '/',
-			exclude: [],
-		},
+		redirect: false,
 	},
 	runtimeConfig: {
 		public: {
